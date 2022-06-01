@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    # Path to dockerfile.
+    # Dockerfile path: '.' as the Dockerfile is present in the same directory of docker-compose.yml.
+    build: .
+    # Availability is important for webserver --> restart always
+    restart: always
+    container_name: website
+    # Mapping of host port:container port
+    ports:
+      - "${HPORT}:${CPORT}"
+    environment: 
+      - "CPORT=${CPORT}" 
+
+#docker-compose up -d
+#docker-compose down
+#docker-compose stop
+#docker-compose start
+#docker-compose rm -f
