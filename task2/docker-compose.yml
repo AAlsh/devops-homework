@@ -13,8 +13,3 @@ services:
     environment: 
       - "CPORT=${CPORT}" 
 
-#docker-compose up -d
-#docker-compose down
-#docker-compose stop
-#docker-compose start
-#docker-compose rm -f
