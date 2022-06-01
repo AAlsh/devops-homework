@@ -71,8 +71,3 @@ CMD sed -i -e "s/\${CPORT}/$CPORT/" /etc/nginx/conf.d/default.conf && nginx -g '
 # #2#
 # CMD envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/webdefault.conf && mv /etc/nginx/conf.d/webdefault.conf /etc/nginx/conf.d/default.conf && /usr/sbin/nginx -g 'daemon off;'
 
-# #================================================================================================================================================================
-
-## ### Instructions to build an image and run container if you don't want to use docker-compose
-## docker build -t web:v1 .
-## docker run -d -e CPORT=2022 -p 8080:2022 --name webserver web:v1
